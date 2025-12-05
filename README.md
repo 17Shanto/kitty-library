@@ -10,3 +10,7 @@ pip install -r requirements.txt
 #Run The Server
 fastapi dev src/
 ```
+## Api doc
+```bash
+http://127.0.0.1:8000/docs
+```
