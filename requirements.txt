@@ -4,4 +4,5 @@ asyncpg
 pydantic-settings
 sqlmodel
 alembic
-passlib[bcrypt]
+bcrypt
+pyjwt

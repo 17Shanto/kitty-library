@@ -19,3 +19,8 @@ class UserModel(BaseModel):
     password_hash: str = Field(exclude=True)
     created_at: datetime 
     updated_at: datetime 
+
+
+class UserLoginModel(BaseModel):
+    email: str
+    password: str = Field(exclude=True)
