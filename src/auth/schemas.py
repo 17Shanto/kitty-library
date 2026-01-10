@@ -23,4 +23,4 @@ class UserModel(BaseModel):
 
 class UserLoginModel(BaseModel):
     email: str
-    password: str = Field(exclude=True)
+    password: str = Field(exclude=True) 

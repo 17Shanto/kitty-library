@@ -23,7 +23,7 @@ def create_access_token(user_data: dict, expiry: timedelta | None = None, refres
     # 1. Calculate the actual future datetime
     if expiry is not None:
         expire_at = datetime.now(timezone.utc) + expiry
-    else:
+    else: 
         # If no expiry provided, use your constant
         expire_at = datetime.now(timezone.utc) + timedelta(seconds= Config.ACCESS_TOKEN_EXPIRY)
     
