@@ -1,5 +1,5 @@
 # Kitty Library
-This is just a practice project of FastAPi. [ CRUD Operation (dummy database) and Well structure ]
+This is just a practice project of FastAPi. Learning core engineering and design principles
 
 ## How to start
 just clone the project 😎 and
