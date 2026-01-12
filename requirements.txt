@@ -6,4 +6,4 @@ sqlmodel
 alembic
 bcrypt
 pyjwt
-aioredis
+redis
