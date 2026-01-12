@@ -12,7 +12,7 @@ class TokenBearer(HTTPBearer):
     async def __call__(self, request: Request)-> HTTPAuthorizationCredentials | None:
         creds = await super().__call__(request)
         
-        token = creds.credentials 
+        token = creds.credentials #type: ignore
         
         token_data = decode_token(token)
         
@@ -24,7 +24,7 @@ class TokenBearer(HTTPBearer):
         
         self.verify_token_data(token_data)
             
-        return token_data
+        return token_data #type: ignore
     
     def token_valid(self, token: str) -> bool:
         token_data = decode_token(token)
