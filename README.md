@@ -15,6 +15,17 @@ fastapi dev src/
 http://127.0.0.1:8000/docs
 ```
 
+##Example Env
+```
+DATABASE_URL = postgresql+asyncpg://username:password@localhost:5432/db_name
+JWT_SECRET = 
+JWT_ALGORITHM = HS256
+ACCESS_TOKEN_EXPIRY = 3600
+REDIS_HOST = localhost
+REDIS_PORT = 6379
+JTI_EXPIRY= 3600
+```
+
 ## 🛠️ Tech Stack
 
 ### Backend & API
