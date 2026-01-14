@@ -47,7 +47,7 @@ class User(SQLModel, table=True):
         sa_column=Column(pg.VARCHAR, nullable=False), exclude=True
     )
     created_at: datetime = Field(sa_column=Column(pg.TIMESTAMP, default=datetime.now))
-    update_at: datetime = Field(sa_column=Column(pg.TIMESTAMP, default=datetime.now))
+    updated_at: datetime = Field(sa_column=Column(pg.TIMESTAMP, default=datetime.now))
 
     # add this
     books: List["Book"] = Relationship(
