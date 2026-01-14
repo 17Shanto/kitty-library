@@ -81,7 +81,7 @@ async def get_new_access_token(token_details:dict = Depends(RefreshTokenBearer()
 
 
 @auth_router.get("/me")
-async def current_user(user= Depends(get_current_user), _: bool = Depends(role_checker)):
+async def current_present_user(user= Depends(get_current_user), _: bool = Depends(role_checker)):
     return user
 
 
