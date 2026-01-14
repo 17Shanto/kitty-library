@@ -5,6 +5,8 @@ This is just a practice project of FastAPi. Learning core engineering and design
 just clone the project 😎 and
 run:
 ```bash
+#Create virtual environment
+python -m venv .venv
 #Install/check your dependencies (you already have them, but torch and torchvision are key):
 pip install -r requirements.txt
 #Run The Server
@@ -15,7 +17,7 @@ fastapi dev src/
 http://127.0.0.1:8000/docs
 ```
 
-##Example Env
+## Example Env
 ```
 DATABASE_URL = postgresql+asyncpg://username:password@localhost:5432/db_name
 JWT_SECRET = 
