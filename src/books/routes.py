@@ -1,7 +1,7 @@
 from typing import List
 from fastapi import APIRouter, status, Depends
 from fastapi.exceptions import HTTPException
-from src.books.schemas import bookModel, singleBook, updateBookModel, BookCreatedModel
+from src.books.schemas import bookModel, singleBook, updateBookModel, BookCreatedModel, BookDetailModel
 from src.db.main import get_session
 from sqlmodel.ext.asyncio.session import AsyncSession
 from src.books.service import BookService
@@ -33,7 +33,7 @@ async def get_user_book_submissions(
     return books
 
 
-@book_router.get("/{book_uid}", response_model=bookModel, status_code=status.HTTP_200_OK, dependencies=[role_checker])
+@book_router.get("/{book_uid}", response_model=BookDetailModel, status_code=status.HTTP_200_OK, dependencies=[role_checker])
 async def getBook_by_id(
     book_uid:str, session: AsyncSession = Depends(get_session),
     token_details=Depends(access_token_bearer)
